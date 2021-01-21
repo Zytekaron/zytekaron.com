@@ -1,0 +1,12 @@
+name: AutoDeployer
+
+on: push
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy the website
+        run: |
+          echo Making request to deploy.zytekaron.com/website
+          curl -H "Authorization: ${{ secrets.AUTH }}" https://deploy.zytekaron.com/restart/website

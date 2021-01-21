@@ -35,7 +35,7 @@ app.get('/', (req, res) => res.status(200).render('home', context));
 app.get('/about', (req, res) => res.status(200).render('about', context));
 app.get('/contact', (req, res) => res.status(200).render('contact', context));
 
-const text = fs.readFileSync('./links.yaml').toString();
+const text = fs.readFileSync('./links.yml').toString();
 const shortUrls = YAML.parse(text);
 for (const [path, url] of keys(shortUrls)) {
     app.get(path, (req, res) => {
