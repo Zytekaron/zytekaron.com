@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Zytekaron - Contact</title>
+    <%- render.template('opengraph', {
+        title: 'Zytekaron - Contact',
+        desc: 'A few ways to get in contact with me.',
+        url: 'https://zytekaron.com/about',
+        image: 'https://cdn.discordapp.com/avatars/272659147974115328/4ff07692fab03809e7754fa160a77155.png'
+    }) %>
     <%- render.template('head') %>
     <%- render.css('contact') %>
 </head>

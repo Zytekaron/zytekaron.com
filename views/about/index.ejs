@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zytekaron - About</title>
+    <title>Zytekaron - About Me</title>
+    <%- render.template('opengraph', {
+        title: 'Zytekaron - About Me',
+        desc: 'Some information about me and where I\'m at.',
+        url: 'https://zytekaron.com/about',
+        image: 'https://cdn.discordapp.com/avatars/272659147974115328/4ff07692fab03809e7754fa160a77155.png'
+    }) %>
     <%- render.template('head') %>
     <%- render.css('about') %>
 </head>
@@ -12,11 +18,16 @@
 <div class="container my-5">
     <h1>About Me</h1>
     <p>
-        I'm a software developer in high school. I enjoy writing backend software using Node.js,
-        Java, and Go, along with a couple other languages I'm learning here and there -- Rust,
-        and a bit of C++. I'm active on <a href="https://github.com/Zytekaron">GitHub</a>, and
-        you can contact me via my <a href="/discord">Discord Server</a> if you'd like to say hi
-        or check out what I'm working on.
+        Hi! I'm Michael. I'm a 17-year-old software developer currently in high school. I spend my free
+        time writing backend software using Node.js, Java, Go, and a couple other languages I'm learning
+        on and off -- Rust, and a bit of C++. I also spend my free time doing Taekwondo training 5-6 days
+        a week, and I participate in lots of tournaments ranging from local ones to national competitions.
+        I've been doing Taekwondo for over 12 years, and I'm currently a 4th Degree Black Belt.
+        <br>
+        <br>
+        I'm active on <a href="https://github.com/Zytekaron">GitHub</a>, and you can contact me via my
+        <a href="/discord">Discord server</a> or via <a href="/contact">other means</a>
+        if you'd like to check out what I'm working on, or just say hi!
         <br>
         <br>
         I'm looking into publishing JavaScript/Node.js tutorials on YouTube in the near future,
