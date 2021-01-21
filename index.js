@@ -25,7 +25,9 @@ const context = {
     },
     links: {
         sk: 'https://github.com/Zytekaron/sk',
-        jvar: 'https://github.com/Zytekaron/jvar',
+        site: 'https://github.com/Zytekaron/zytekaron.com',
+        jvar: 'https://github.com/Zytekaron/jvar.js',
+        commando: 'https://github.com/Zytekaron/commando'
     }
 };
 
@@ -37,9 +39,15 @@ const text = fs.readFileSync('./links.yaml').toString();
 const shortUrls = YAML.parse(text);
 for (const [path, url] of keys(shortUrls)) {
     app.get(path, (req, res) => {
-        res.status(301).location(url);
+        res.status(301)
+            .location(url)
+            .end();
     });
 }
+
+app.use((req, res) => {
+    res.status(404).render('404', context);
+});
 
 function* keys(obj, path = '') {
     for (const [key, value] of Object.entries(obj)) {
