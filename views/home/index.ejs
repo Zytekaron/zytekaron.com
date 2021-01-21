@@ -11,7 +11,16 @@
 
 <section id="home">
     <div class="container my-5">
-        <h1>Zytekaron</h1>
+        <h1 class="mb-5">Zytekaron</h1>
+
+        <section id="contact">
+            <a href="/github" class="btn btn-outline-primary">
+                GitHub
+            </a>
+            <a href="/discord" class="btn btn-outline-primary">
+                Discord
+            </a>
+        </section>
     </div>
 </section>
 
@@ -21,8 +30,14 @@
         <div class="row">
             <%- render.template('project', {
                 title: 'sk',
-                text: 'Sk (sklang) is a high-level, interpreted programming language written in Go.',
+                text: 'Sk (sklang) is a high-level, interpreted programming language written in Go. ' +
+                    '(GitHub repository is not currently up to date)',
                 link: links.sk
+            }) %>
+            <%- render.template('project', {
+                title: 'zytekaron.com',
+                text: 'The website you\'re using now is open source! Check it out (and maybe contribute?)',
+                link: links.site
             }) %>
             <%- render.template('project', {
                 title: 'jvar',
