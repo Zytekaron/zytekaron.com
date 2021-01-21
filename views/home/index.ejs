@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zytekaron - Contact</title>
+    <%- render.template('head') %>
+    <%- render.css('home') %>
+</head>
+<body>
+<%- render.template('navbar') %>
+
+<section id="home">
+    <div class="container my-5">
+        <h1>Zytekaron</h1>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container mt-5">
+        <h3 class="mb-3">Projects</h3>
+        <div class="row">
+            <%- render.template('appcard', {
+                title: 'sk',
+                text: 'Sk (sklang) is a high-level, interpreted programming language written in Go.',
+                link: links.sk
+            }) %>
+            <%- render.template('appcard', {
+                title: 'jvar',
+                text: 'A library for JavaScript and Java developers with a wide range of developer utilities.',
+                link: links.jvar
+            }) %>
+            <%- render.template('appcard', {
+                title: 'commando',
+                text: 'A Java library used with JDA to create simple command handlers for Discord bots.',
+                link: links.commando
+            }) %>
+        </div>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container mt-5">
+        <h3 class="mb-3">Programming Languages</h3>
+        <div class="row">
+            <div class="col-lg-4 text-center">
+                <div class="text-center key-image">
+                    <img src="https://seeklogo.com/images/N/nodejs-logo-FBE122E377-seeklogo.com.png" alt="Node.js"
+                         width="30%">
+                </div>
+                <div class="container mb-5">
+                    <h1>Node.js</h1>
+                    <p class="lead">
+                        I've been using Node.js since I started programming
+                        more than 3 years ago. I've built many, many projects,
+                        including Discord bots, web servers like this website,
+                        chat applications, and a couple desktop utilities.
+                        JavaScript is a really easy language to learn, and the
+                        community is <i>huge,</i> which is just one of the many
+                        reasons I enjoy using it. (No, I don't use TypeScript.)
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="text-center key-image">
+                    <img src="https://assets.stickpng.com/images/58480979cef1014c0b5e4901.png" alt="Java"
+                         width="30%">
+                </div>
+                <div class="container mb-5">
+                    <h1>Java</h1>
+                    <p class="lead">
+                        I first looked into learning Java a couple years
+                        ago, and I started using it as a step up from
+                        Node.js (being a statically typed language and all),
+                        and to write some basic Minecraft plugins and some
+                        more efficient desktop utilities around a year and
+                        a half ago. I'm not currently using Java for any
+                        fresh projects, but I will be soon, and I'm still
+                        maintaining some of my older projects.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <div class="text-center key-image">
+                    <img src="https://camo.githubusercontent.com/756cf97d34e26aa5eb9140e65094cf1c9b60c089ae90a307df36c557d2494806/68747470733a2f2f7261772e6769746875622e636f6d2f676f6c616e672d73616d706c65732f676f706865722d766563746f722f6d61737465722f676f706865722d66726f6e742e706e67"
+                         alt="Go" width="30%">
+                </div>
+                <div class="container mb-5">
+                    <h1>Go</h1>
+                    <p class="lead">
+                        I've only been using Go for a couple months, but
+                        I've already committed to writing many different
+                        projects in it that benefit from its concurrency
+                        and language features. I'm currently using Go for
+                        my personal services (except for this website),
+                        like notification and cronjob services, as well as
+                        a couple others. Go is definitely fun to use!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- render.template('navbar') %>
+<%- render.template('footer') %>
+
+</body>
+</html>

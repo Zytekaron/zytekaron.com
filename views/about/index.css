@@ -1,0 +1,16 @@
+body, .card, .list-group-item {
+    color: white;
+    background-color: rgb(48, 47, 47);
+}
+
+.card, .list-group-item {
+    border: 1px solid grey;
+}
+
+#socials {
+    text-align: center;
+    margin: 20px;
+    word-spacing: 20px;
+    border-radius: 30px;
+    padding: 10px;
+}
