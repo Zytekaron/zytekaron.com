@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const fs = require('fs');
 const express = require('express');
+const YAML = require('yaml');
 const type = require('jvar/fn/type');
 
 const port = process.env.PORT || 8080;
@@ -32,12 +33,9 @@ app.get('/', (req, res) => res.status(200).render('home', context));
 app.get('/about', (req, res) => res.status(200).render('about', context));
 app.get('/contact', (req, res) => res.status(200).render('contact', context));
 
-app.get('/discord', (req, res) => res.status(301).location('https://discord.gg/FfzwgUm'));
-app.get('/youtube', (req, res) => res.status(301).location('https://www.youtube.com/channel/UC67LJAS2TtIedsr0xA8UQ3w'));
-
-const shortUrls = require('./short');
+const text = fs.readFileSync('./links.yaml').toString();
+const shortUrls = YAML.parse(text);
 for (const [path, url] of keys(shortUrls)) {
-    console.log('GET', path, '->', url);
     app.get(path, (req, res) => {
         res.status(301).location(url);
     });
