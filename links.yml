@@ -4,12 +4,13 @@ youtube: 'https://www.youtube.com/channel/UC67LJAS2TtIedsr0xA8UQ3w'
 github: 'https://github.com/Zytekaron'
 
 # My referral links
-digitalocean: 'https://m.do.co/c/70dc95dac369'
-vultr: 'https://www.vultr.com/?ref=8699725-6G'
-deepsource: 'https://deepsource.io/signup/?referral_code=ZDXPDG'
-clubhouse: 'http://r.clbh.se/mvfOgGl'
-trello: 'https://trello.com/zytekaron/recommend'
-warp: 'https://warp.plus/4GPvE'
+referral:
+  digitalocean: 'https://m.do.co/c/70dc95dac369'
+  vultr: 'https://www.vultr.com/?ref=8699725-6G'
+  deepsource: 'https://deepsource.io/signup/?referral_code=ZDXPDG'
+  clubhouse: 'http://r.clbh.se/mvfOgGl'
+  trello: 'https://trello.com/zytekaron/recommend'
+  warp: 'https://warp.plus/4GPvE'
 
 # Raspberry Pi 4 accessories
 raspberry-pi-4:
