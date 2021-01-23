@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zytekaron - Contact</title>
+    <%- render.template('opengraph', {
+        title: 'Zytekaron - Referral',
+        desc: 'A bunch of useful referral links you should use to help both of us out!',
+        url: 'https://zytekaron.com/referral',
+        image: 'https://cdn.discordapp.com/avatars/272659147974115328/4ff07692fab03809e7754fa160a77155.png'
+    }) %>
+    <%- render.template('head') %>
+    <%- render.css('contact') %>
+</head>
+<body>
+<%- render.template('navbar') %>
+
+<section id="home">
+    <div class="container my-5">
+        <h1 class="mb-3">Referral Links</h1>
+
+        <section id="referrals">
+            <a href="/referral/digitalocean" class="btn btn-outline-primary">DigitalOcean</a>
+            Get $100 to spend on hosting services over 60 days!
+            <br>
+            <a href="/referral/vultr" class="btn btn-outline-primary">Vultr</a>
+            Get $100 to spend on hosting services over 30 days!
+            <br>
+            <a href="/referral/deepsource" class="btn btn-outline-primary">Deepsource.io</a>
+            Deepsource.io analyzes your code and helps you fix bugs, prevent security risks, anti-patterns, and much
+            more
+            <br>
+            <a href="/referral/clubhouse" class="btn btn-outline-primary">Clubhouse</a>
+            Clubhouse is a project management solution for large teams with lots of useful productivity and project
+            development features
+            <br>
+            <a href="/referral/trello" class="btn btn-outline-primary">Trello</a>
+            Trello is a more minimal project management solution, but still has many useful features for projects
+            <br>
+            <a href="/referral/warp" class="btn btn-outline-primary">Warp+</a>
+            Warp+ is a free service offered by Cloudflare to speed up your internet. These guys even own the 1.1.1.1 IP!
+            <br>
+        </section>
+    </div>
+</section>
+
+<%- render.template('footer') %>
+
+</body>
+</html>
