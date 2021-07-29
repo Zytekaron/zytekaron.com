@@ -24,10 +24,10 @@ const context = {
         }
     },
     links: {
-        sk: 'https://github.com/Zytekaron/sk',
+        sk: 'https://github.com/Zytekaron/sk-go',
         site: 'https://github.com/Zytekaron/zytekaron.com',
         jvar: 'https://github.com/Zytekaron/jvar.js',
-        commando: 'https://github.com/Zytekaron/commando'
+        gotil: 'https://github.com/Zytekaron/gotil'
     }
 };
 
