@@ -5,7 +5,7 @@
     <title>Zytekaron</title>
     <%- render.template('opengraph', {
         title: 'Zytekaron',
-        desc: 'A personal portfolio for Zytekaron, a backend software developer.',
+        desc: 'A personal portfolio for Zytekaron, a backend software engineer.',
         url: 'https://zytekaron.com/about',
         image: 'https://cdn.discordapp.com/avatars/272659147974115328/4ff07692fab03809e7754fa160a77155.png'
     }) %>
@@ -19,7 +19,7 @@
     <div class="container my-5">
         <h1 class="mb-3">Zytekaron</h1>
 
-        <h5 class="mb-3">I'm an 18-year-old software developer from Seattle, WA.</h5>
+        <h5 class="mb-3">I'm a 19-year-old software engineer from Seattle, WA.</h5>
 
         <section id="contact">
             <a href="/github" class="btn btn-outline-primary">GitHub</a>
@@ -45,7 +45,7 @@
             }) %>
             <%- render.template('project', {
                 title: 'gotil',
-                text: 'A library for Go developers that comes with similar utilities to jvar.',
+                text: 'A library for Go developers that offers various utilities useful in backend applications.',
                 link: links.gotil
             }) %>
             <%- render.template('project', {
@@ -65,12 +65,12 @@
                 lang: 'Node.js',
                 desc: [
                     "I've been using Node.js since I started programming",
-                    "around the end of 2017. I've built many, many projects",
-                    "with it, including Discord bots, web servers like this site,",
-                    "chat applications, and quite a few other things like desktop",
-                    "utilities. JavaScript is an easy language to learn, and the",
-                    "community is <i>huge,</i> which is just one of the many",
-                    "reasons I enjoy using it (and no, I don't use TypeScript)"
+                    "around the end of 2017. I've built many projects with it",
+                    "including Discord bots, websites like this one, chat",
+                    "applications, and quite a few others. JavaScript is an",
+                    "easy language to learn, and the community is <i>huge,</i>",
+                    "which is just one of the many reasons I enjoy using it.",
+                    "(and no, I don't use TypeScript)"
                 ].join(' '),
                 image: '/views/home/assets/node.png'
             }) %>
@@ -90,14 +90,14 @@
             <%- render.template('lang', {
                 lang: 'Go',
                 desc: [
-                    "I've been using Go for close to a year now and",
-                    "I've committed to using it for many different projects",
-                    "that benefit from its concurrency and language features,",
+                    "I've been using Go for multiple years now and I've committed",
+                    "to using it for many different projects, many of which benefit",
+                    "from its concurrency and other unique language features,",
                     "as well as just how simple it is to build for any system.",
                     "I'm currently using Go for most of my personal services,",
                     "including notification and cronjob services, among other",
                     "projects. I'm really enjoying Go, and I'd recommend it to",
-                    "anyone looking to learn a statically-typed but simple language"
+                    "anyone looking to learn a very simple, statically-typed language."
                 ].join(' '),
                 image: '/views/home/assets/go.png'
             }) %>
