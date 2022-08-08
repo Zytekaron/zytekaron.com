@@ -5,7 +5,7 @@ const express = require('express');
 const YAML = require('yaml');
 const type = require('jvar/fn/type');
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 80;
 
 const app = express();
 
@@ -31,22 +31,22 @@ const context = {
     }
 };
 
-app.get('/', (req, res) => res.status(200).render('home', context));
-app.get('/about', (req, res) => res.status(200).render('about', context));
-app.get('/contact', (req, res) => res.status(200).render('contact', context));
-app.get('/referral', (req, res) => res.status(200).render('referral', context));
+app.get('/', (_, res) => res.status(200).render('home', context));
+app.get('/about', (_, res) => res.status(200).render('about', context));
+app.get('/contact', (_, res) => res.status(200).render('contact', context));
+app.get('/referral', (_, res) => res.status(200).render('referral', context));
 
 const text = fs.readFileSync('./links.yml').toString();
 const shortUrls = YAML.parse(text);
 for (const [path, url] of keys(shortUrls)) {
-    app.get(path, (req, res) => {
+    app.get(path, (_, res) => {
         res.status(301)
             .location(url)
             .end();
     });
 }
 
-app.use((req, res) => {
+app.use((_, res) => {
     res.status(404).render('404', context);
 });
 
