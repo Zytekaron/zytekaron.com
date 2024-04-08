@@ -1,0 +1,104 @@
+{
+  "global": {
+    "navbar": {
+      "items": [
+        {
+          "text": "Home",
+          "href": "/"
+        },
+        {
+          "text": "About",
+          "href": "/about"
+        },
+        { "text": "Projects", "href": "/projects" },
+
+        {
+          "text": "Resources",
+          "href": "/resources"
+        },
+        { "text": "Docs", "href": "/docs", "external": true }
+      ]
+    },
+    "footer": {
+      "socials": [
+        {
+          "name": "Discord",
+          "href": "#"
+        },
+        { "name": "Twitter", "href": "#", "icon": "twitter-x" },
+        { "name": "Signal", "href": "#" },
+        { "name": "Telegram", "href": "#" },
+        {
+          "name": "Email",
+          "href": "#",
+          "icon": "envelope-at"
+        },
+        {
+          "name": "Instagram",
+          "href": "#"
+        },
+        {
+          "name": "Linkedin",
+          "href": "#"
+        },
+        { "name": "Reddit", "href": "#" }
+      ]
+    },
+    "pages": {
+      "about": {
+        "image": "https://placehold.co/400"
+      }
+    },
+
+    "errors": {
+      "default": {
+        "heading": "The Unknown",
+        "message": "Something went wrong, either on your side, or ours. Not sure what it is though!"
+      },
+      "400": {
+        "heading": "Bad Request",
+        "message": "What you tryna do!?"
+      },
+      "401": {
+        "heading": "Unauthorized",
+        "message": "Unauthorized access! Please log in to continue."
+      },
+      "403": {
+        "heading": "Forbidden",
+        "message": "This place isn't for you!"
+      },
+      "404": {
+        "heading": "Not Found",
+        "message": "This page is lost in the sauce! Please head back, wanderer!"
+      },
+      "500": {
+        "heading": "Internal Server Error",
+        "message": "Errors happen, and so do they with machines!"
+      },
+      "503": {
+        "heading": "Service Unavailable",
+        "message": "Service temporarily unavailable. Please try again later."
+      }
+    }
+  },
+  "private": {
+    "log4js": {
+      "appenders": {
+        "console": { "type": "console" },
+        "everything": { "type": "file", "filename": "logs/app.log" },
+        "emergencies": { "type": "file", "filename": "logs/error.log" },
+        "just-errors": {
+          "type": "logLevelFilter",
+          "appender": "emergencies",
+          "level": "error"
+        }
+      },
+      "categories": {
+        "default": {
+          "appenders": ["console", "everything", "just-errors"],
+          "level": "info"
+        }
+      }
+    }
+  }
+}

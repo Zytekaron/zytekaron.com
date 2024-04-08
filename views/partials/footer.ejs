@@ -1,0 +1,16 @@
+<footer class="blur-background-1 bg-transparent position-static center mb-5 w-100 border-top pt-3 pb-2">
+  <div class="container">
+    <div class="row">
+      <div class="text-center text-md-left">
+        <p>
+          <i class="bi bi-c-circle me-1"></i>Michael Thornes <%- _date.getFullYear() %>. All Rights Reserved.
+        </p>
+      </div>
+      <div class="flex-row footer-socials">
+        <% global.footer.socials.forEach(social => { %>
+        <a class="p-2 blur-background rounded-circle" href="<%- social.href %>"><i class="bi bi-<%- social.icon ? social.icon.toLowerCase() : social.name.toLowerCase() %>"></i></a>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</footer>

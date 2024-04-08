@@ -1,0 +1,22 @@
+<div class="container pb-4 pt-4 mb-4 glassmorphism">
+  <div class="row">
+    <!-- Profile -->
+    <div class="col-md-6 text-center order-md-2">
+      <img src="<%- global.pages.about.image %>" class="img-fluid rounded-circle" alt="My Picture" height="400px" width="400px" />
+      <h3 class="mt-2">Michael Thornes</h3>
+    </div>
+
+    <!-- Border for mobile devices -->
+    <div class="pt-3 pb-3 col-12 d-block d-md-none">
+      <div class="border-top border-2"></div>
+    </div>
+
+    <!-- About section -->
+    <div class="col-md-6 order-md-1">
+      <h2 class="text-center d-block d-md-none">About Me</h2>
+      <h2 class="d-none d-md-block">About Me</h2>
+
+      <div><%- data.content.about %></div>
+    </div>
+  </div>
+</div>

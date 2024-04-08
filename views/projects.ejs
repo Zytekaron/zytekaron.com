@@ -1,0 +1,14 @@
+<div class="container">
+  <%# Project Text Box %>
+  <div class="container glassmorphism mb-5 p-4 centered-heading">
+    <%- content %>
+  </div>
+  <%# Project Cards %>
+  <div class="row mb-2">
+    <% projects.forEach(function(project){ %>
+    <div class="col-lg-4 col-md-6 mb-4">
+      <%- include('components/project-card', project) %>
+    </div>
+    <% }) %>
+  </div>
+</div>

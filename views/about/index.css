@@ -1,8 +1,0 @@
-body, .card, .list-group-item {
-    color: white;
-    background-color: #30302F;
-}
-
-.card, .list-group-item {
-    border: 1px solid grey;
-}

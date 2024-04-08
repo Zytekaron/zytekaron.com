@@ -1,0 +1,25 @@
+<div class="card w-10 bg-transparent blur-background-3 border border-white p-0 text-white flex" style="min-height: 250px">
+  <div class="card-body position-relative d-flex flex-column">
+    <div class="d-flex justify-content-between align-items-center mb-2" style="position: relative">
+      <h5 class="card-title text-center w-100"><%- title %></h5>
+      <% if (pinned) { %>
+      <i class="bi bi-pin-angle-fill position-absolute end-0 pb-2"></i>
+      <% } %>
+    </div>
+    <p class="card-text text-center" style="flex: 1"><%- description %></p>
+    <!-- Buttons block -->
+    <div class="center mt-5" style="display: block">
+      <% buttons.forEach(function(button) { %>
+      <span>
+        <a href="<%- button.url %>" class="card-link btn btn-success">
+          <% if (button.icon.startsWith('https://')) { %>
+          <img src="<%- button.icon %>" alt="<%- button.text %>" style="width: 20px; height: 20px" />
+          <% } else { %>
+          <i class="bi bi-<%- button.icon %>"></i>
+          <% } %> <%- button.text %>
+        </a>
+      </span>
+      <% }); %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<%# Intro Text %>
+<div class="container center p-5 mt-2 glassmorphism w-75 glow-animation" style="border-radius: 4px">
+  <%- data.content.intro %>
+</div>
+<%# Card container %>
+<div class="container p-3 mt-5">
+  <div class="row justify-content-center d-flex flex-row">
+    <%# Cards %>
+    <% data.content.projects.forEach((project, i) => { %>
+    <div class="col-md-3 mb-5">
+      <%- include("components/project-card.ejs", project) %>
+    </div>
+    <% }) %>
+  </div>
+</div>

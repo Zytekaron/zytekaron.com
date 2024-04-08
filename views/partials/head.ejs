@@ -1,0 +1,30 @@
+<head>
+  <title>Zytekaron</title>
+
+  <link href="/styles/global.css" rel="stylesheet" />
+  <script src="/js/global.js"></script>
+
+  <%# Dynamic CSS Imports %>
+  <% imports?.css?.forEach(css => { %>
+  <link rel="stylesheet" type="text/css" href="<%= css %>">
+  <% }) %>
+
+
+  <%# Fira Font %>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <%# JQuery %>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+  <%# Bootstrap %>
+  <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <link href="/bootstrap/bootstrap-icons/font/bootstrap-icons.min.css" rel="stylesheet" />
+
+  <%# Three + Vanta birds %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="/vanta/vanta.birds.min.js"></script>
+
+  <%# Responsiveness %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>

@@ -1,0 +1,107 @@
+[
+  {
+    "title": "Foo Project 1",
+    "description": "Here goes your description",
+    "buttons": [
+      {
+        "text": "foo.com",
+        "icon": "box-arrow-up-right",
+        "url": "https://example.com"
+      },
+      {
+        "icon": "github",
+        "url": "https://github.com/foo/"
+      },
+      {
+        "icon": "gitlab",
+        "url": "https://gitlab.com/foo/"
+      }
+    ],
+    "pinned": true
+  },
+  {
+    "title": "Foo Project 2",
+    "description": "A very cool blogging website and forum called foorum",
+    "buttons": [
+      {
+        "icon": "gitlab",
+        "url": "https://gitlab.com/foo/"
+      },
+      {
+        "text": "",
+        "icon": "github",
+        "url": "https://github.com/foo"
+      },
+      {
+        "text": "",
+        "icon": "book",
+        "url": "https://example.com"
+      }
+    ],
+    "pinned": true
+  },
+  {
+    "title": "Random Project 1",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "buttons": [
+      {
+        "text": "Visit Website",
+        "icon": "globe",
+        "url": "https://randomproject1.com"
+      },
+      {
+        "icon": "github",
+        "url": "https://github.com/randomproject1"
+      }
+    ],
+    "pinned": true
+  },
+  {
+    "title": "Random Project 2",
+    "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+    "buttons": [
+      {
+        "text": "Learn More",
+        "icon": "info-circle",
+        "url": "https://randomproject2.com/about"
+      },
+      {
+        "icon": "gitlab",
+        "url": "https://gitlab.com/randomproject2"
+      }
+    ],
+    "pinned": false
+  },
+  {
+    "title": "Awesome Project",
+    "description": "Suspendisse potenti. Duis scelerisque eleifend lacus, ac accumsan velit dictum id.",
+    "buttons": [
+      {
+        "text": "Download Now",
+        "icon": "cloud-download",
+        "url": "https://awesomeproject.com/download"
+      },
+      {
+        "icon": "github",
+        "url": "https://github.com/awesomeproject"
+      }
+    ],
+    "pinned": false
+  },
+  {
+    "title": "Fantastic Project",
+    "description": "Quisque volutpat varius mauris nec faucibus.",
+    "buttons": [
+      {
+        "text": "Docs",
+        "icon": "book",
+        "url": "https://fantasticproject.com/docs"
+      },
+      {
+        "icon": "gitlab",
+        "url": "https://gitlab.com/fantasticproject"
+      }
+    ],
+    "pinned": true
+  }
+]
