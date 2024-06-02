@@ -1,4 +1,12 @@
+const truth = {
+    "0": false,
+    "1": true,
+    "false": false,
+    "true": true,
+    "no": false,
+    "yes": true,
+};
+
 export default function (str) {
-  console.log(str);
-  return str?.toLowerCase() === "true";
+    return truth[str?.toLowerCase()] ?? "false";
 }

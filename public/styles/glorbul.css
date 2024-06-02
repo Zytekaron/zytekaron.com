@@ -1,0 +1,142 @@
+:root {
+  /* Blur variables */
+  --blur-1: 2px;
+  --blur-2: 5px;
+  --blur-3: 8px;
+
+  /* Color Themes */
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-background: rgba(43, 43, 43, 0.75);
+  --color-hover-background: rgba(0, 0, 0, 0.459);
+
+  /* --color-glassmorphism: rgba(83, 136, 255, 0.25);
+  --color-glassmorphism-shadow: rgba(9, 21, 185, 0.37);
+  --color-glassmorphism-border: rgba(255, 255, 255, 0.18); */
+  
+  --color-glassmorphism: rgba(0, 255, 140, 0.25);
+  --color-glassmorphism-glow: rgba(34, 221, 136, 0.37);
+  --color-glassmorphism-border: rgba(255, 255, 255, 0.18);
+}
+
+/* Global Styles */
+body,
+* {
+  color: var(--color-white);
+}
+
+html,
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Vanta Container */
+#vanta-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main Content */
+/* #main {
+  overflow: auto;
+  --padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: calc(100% - var(--padding) * 2);
+  margin: 1rem auto;
+  padding: var(--padding);
+  z-index: 1;
+} */
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  main {
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Blur Backgrounds */
+.blur-background-3 {
+  backdrop-filter: blur(var(--blur-3));
+  background-color: var(--color-background);
+  -webkit-backdrop-filter: blur(var(--blur-3));
+}
+
+.blur-background-2 {
+  backdrop-filter: blur(var(--blur-2));
+  background-color: var(--color-background);
+  -webkit-backdrop-filter: blur(var(--blur-2));
+}
+
+.blur-background-1 {
+  backdrop-filter: blur(var(--blur-1));
+  background-color: var(--color-background);
+  -webkit-backdrop-filter: blur(var(--blur-1));
+}
+
+/* Glassmorphism */
+.glassmorphism {
+  background: var(--color-glassmorphism);
+  /* box-shadow: 0 8px 32px 0 var(--color-glassmorphism-shadow); */
+  backdrop-filter: blur(var(--blur-3));
+  -webkit-backdrop-filter: blur(var(--blur-3));
+  border-radius: 10px;
+  border: 1px solid var(--color-glassmorphism-border);
+}
+
+/* Footer */
+/* footer {
+  .footer-socials {
+    a:hover {
+      transition-duration: 0.3s;
+      background-color: var(--color-hover-background);
+    }
+  }
+} */
+
+/* Centering */
+.center {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-heading {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    text-align: center;
+    justify-content: center;
+  }
+}

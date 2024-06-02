@@ -6,20 +6,20 @@ const router = Router();
 
 router.use(serveStatic(path.join(__project_dir, "public")));
 router.use(
-  "/bootstrap",
-  serveStatic(path.join(__project_dir, "node_modules/bootstrap/dist"))
+    "/bootstrap",
+    serveStatic(path.join(__project_dir, "node_modules/bootstrap/dist"))
 );
 router.use(
-  "/bootstrap/bootstrap-icons/font",
-  serveStatic(path.join(__project_dir, "node_modules/bootstrap-icons/font"))
+    "/bootstrap/bootstrap-icons/font",
+    serveStatic(path.join(__project_dir, "node_modules/bootstrap-icons/font"))
 );
 router.use(
-  "/bootstrap/bootstrap-icons/icons",
-  serveStatic(path.join(__project_dir, "node_modules/bootstrap-icons/icons"))
+    "/bootstrap/bootstrap-icons/icons",
+    serveStatic(path.join(__project_dir, "node_modules/bootstrap-icons/icons"))
 );
 router.use(
-  "/vanta",
-  serveStatic(path.join(__project_dir, "node_modules/vanta/dist"))
+    "/vanta",
+    serveStatic(path.join(__project_dir, "node_modules/vanta/dist"))
 );
 
 export default router;

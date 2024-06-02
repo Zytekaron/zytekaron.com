@@ -1,5 +1,6 @@
 [
   {
+    "hide": true,
     "title": "Foo Project 1",
     "description": "Here goes your description",
     "buttons": [
@@ -20,6 +21,7 @@
     "pinned": true
   },
   {
+    "hide": true,
     "title": "Foo Project 2",
     "description": "A very cool blogging website and forum called foorum",
     "buttons": [
@@ -41,6 +43,7 @@
     "pinned": true
   },
   {
+    "hide": true,
     "title": "Random Project 1",
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "buttons": [
@@ -57,6 +60,7 @@
     "pinned": true
   },
   {
+    "hide": true,
     "title": "Random Project 2",
     "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
     "buttons": [
@@ -73,6 +77,7 @@
     "pinned": false
   },
   {
+    "hide": true,
     "title": "Awesome Project",
     "description": "Suspendisse potenti. Duis scelerisque eleifend lacus, ac accumsan velit dictum id.",
     "buttons": [
@@ -89,6 +94,7 @@
     "pinned": false
   },
   {
+    "hide": true,
     "title": "Fantastic Project",
     "description": "Quisque volutpat varius mauris nec faucibus.",
     "buttons": [

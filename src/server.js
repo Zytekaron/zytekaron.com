@@ -21,62 +21,62 @@ app.set("views", path.join(__project_dir, "views"));
 app.set("view engine", "ejs");
 
 // Middleware
-
 app.use(staticHandler);
 app.use(renderHandler);
 
 const loadRouters = async (dir, prefix = "") => {
-  const files = readdirSync(dir);
+    const files = readdirSync(dir);
 
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stats = statSync(filePath);
+    for (const file of files) {
+        const filePath = path.join(dir, file);
+        const stats = statSync(filePath);
 
-    if (stats.isDirectory()) {
-      const subPrefix = path.join(prefix, file);
-      await loadRouters(filePath, subPrefix);
-    } else if (path.extname(file) === ".js") {
-      const name = path.basename(file, ".js");
+        if (stats.isDirectory()) {
+            const subPrefix = path.join(prefix, file);
+            await loadRouters(filePath, subPrefix);
+        } else if (path.extname(file) === ".js") {
+            const name = path.basename(file, ".js");
 
-      if (name.startsWith("_")) {
-        continue;
-      }
+            if (name.startsWith("_")) {
+                continue;
+            }
 
-      const route =
-        name === "index" ? `/${prefix}` || "/" : `${prefix}/${name}`;
-      const fileURL = pathToFileURL(filePath).href;
-      const router = await import(fileURL);
+            const route = name === "index"
+                ? `/${prefix}`
+                : `${prefix}/${name}`;
+            const fileURL = pathToFileURL(filePath);
+            const router = await import(fileURL.href);
 
-      app.use(route, router.default);
-      logger.info("Registering router: %s -> %s", filePath, route);
+            app.use(route, router.default);
+            logger.info("Registering router: %s -> %s", filePath, route);
+        }
     }
-  }
 };
 
 await loadRouters(path.join(__project_dir, "src/routes"));
 app.use(errorHandler);
 
 const shutdown = (server) => {
-  logger.debug("Received kill signal, shutting down gracefully");
-  server.close(() => {
-    logger.debug("Closed out remaining connections");
-    process.exit(0);
-  });
+    logger.debug("Received kill signal, shutting down gracefully");
+    server.close(() => {
+        logger.debug("Closed out remaining connections");
+        process.exit(0);
+    });
 
-  setTimeout(() => {
-    logger.error(
-      "Could not close connections in time, forcefully shutting down"
-    );
-    process.exit(1);
-  }, 10000);
+    setTimeout(() => {
+        logger.error(
+            "Could not close connections in time, forcefully shutting down"
+        );
+        process.exit(1);
+    }, 10_000);
 };
 
 const server = app.listen(process.env.PORT, process.env.HOSTNAME, () => {
-  logger.info(
-    "Listening on http://%s:%d",
-    process.env.HOSTNAME,
-    process.env.PORT
-  );
+    logger.info(
+        "Listening on http://%s:%d",
+        process.env.HOSTNAME,
+        process.env.PORT
+    );
 });
 
 process.on("SIGTERM", () => shutdown(server));

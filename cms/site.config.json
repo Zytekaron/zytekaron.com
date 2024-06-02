@@ -10,46 +10,69 @@
           "text": "About",
           "href": "/about"
         },
-        { "text": "Projects", "href": "/projects" },
-
         {
-          "text": "Resources",
-          "href": "/resources"
+          "text": "Projects",
+          "href": "/projects"
         },
-        { "text": "Docs", "href": "/docs", "external": true }
+        {
+          "text": "Referrals",
+          "href": "/referrals"
+        },
+        {
+          "text": "Docs",
+          "href": "/docs",
+          "external": true
+        }
       ]
     },
-    "footer": {
       "socials": [
         {
-          "name": "Discord",
-          "href": "#"
-        },
-        { "name": "Twitter", "href": "#", "icon": "twitter-x" },
-        { "name": "Signal", "href": "#" },
-        { "name": "Telegram", "href": "#" },
-        {
           "name": "Email",
-          "href": "#",
+          "href": "mailto:michael@zyte.me",
           "icon": "envelope-at"
         },
         {
+          "name": "GitHub",
+          "href": "https://github.com/Zytekaron"
+        },
+        {
+          "name": "Discord",
+          "href": "https://discord.gg/FfzwgUm"
+        },
+        {
+          "name": "Telegram",
+          "href": "https://t.me/Zytekaron"
+        },
+        {
+          "name": "Signal",
+          "href": "https://signal.me/#eu/xuGPwTY4-uE2L5_Sn9_7HvfXlQ1AVcRF0n1-u4gQxcJq0tJ0KLRFMJvyaJDupgFv"
+        },
+        {
+          "name": "Linkedin",
+          "href": "https://www.linkedin.com/in/michael-thornes-04bb10240/"
+        },
+        {
+          "hide": true,
           "name": "Instagram",
           "href": "#"
         },
         {
-          "name": "Linkedin",
+          "hide": true,
+          "name": "Reddit",
           "href": "#"
         },
-        { "name": "Reddit", "href": "#" }
-      ]
-    },
+        {
+          "hide": true,
+          "name": "Twitter",
+          "href": "#",
+          "icon": "twitter-x"
+        }
+      ],
     "pages": {
       "about": {
-        "image": "https://placehold.co/400"
+        "image": "/assets/pfp.png"
       }
     },
-
     "errors": {
       "default": {
         "heading": "The Unknown",
@@ -84,9 +107,17 @@
   "private": {
     "log4js": {
       "appenders": {
-        "console": { "type": "console" },
-        "everything": { "type": "file", "filename": "logs/app.log" },
-        "emergencies": { "type": "file", "filename": "logs/error.log" },
+        "console": {
+          "type": "console"
+        },
+        "everything": {
+          "type": "file",
+          "filename": "logs/app.log"
+        },
+        "emergencies": {
+          "type": "file",
+          "filename": "logs/error.log"
+        },
         "just-errors": {
           "type": "logLevelFilter",
           "appender": "emergencies",
@@ -95,7 +126,11 @@
       },
       "categories": {
         "default": {
-          "appenders": ["console", "everything", "just-errors"],
+          "appenders": [
+            "console",
+            "everything",
+            "just-errors"
+          ],
           "level": "info"
         }
       }

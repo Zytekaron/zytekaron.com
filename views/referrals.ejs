@@ -1,0 +1,12 @@
+<div class="container mt-5 text-center mb-4 p-2">
+  <div class="container">
+    <div class="container glassmorphism mb-4 p-4 centered-heading">
+      <h2>Referral Links</h2>
+    </div>
+    <div class="row">
+      <% referrals.forEach(properties => { %>
+      <%- include("components/referral-card", properties) %>
+      <% }) %>
+    </div>
+  </div>
+</div>

@@ -12,11 +12,12 @@
       <% buttons.forEach(function(button) { %>
       <span>
         <a href="<%- button.url %>" class="card-link btn btn-success">
+          <%- button.text %>
           <% if (button.icon.startsWith('https://')) { %>
           <img src="<%- button.icon %>" alt="<%- button.text %>" style="width: 20px; height: 20px" />
           <% } else { %>
           <i class="bi bi-<%- button.icon %>"></i>
-          <% } %> <%- button.text %>
+          <% } %>
         </a>
       </span>
       <% }); %>

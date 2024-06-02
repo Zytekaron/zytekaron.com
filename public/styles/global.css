@@ -8,10 +8,18 @@
   --color-white: #ffffff;
   --color-black: #000000;
   --color-background: rgba(43, 43, 43, 0.75);
-  --color-glassmorphism: rgba(83, 136, 255, 0.25);
-  --color-glassmorphism-shadow: rgba(9, 21, 185, 0.37);
-  --color-glassmorphism-border: rgba(255, 255, 255, 0.18);
   --color-hover-background: rgba(0, 0, 0, 0.459);
+  
+  --color-glassmorphism: rgba(0, 255, 140, 0.25);
+  --color-glassmorphism-glow: rgba(34, 221, 136, 0.37);
+  --color-glassmorphism-border: rgba(255, 255, 255, 0.18);
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Global Styles */
@@ -41,16 +49,18 @@ html,
   overflow: hidden;
   background-size: cover;
   background-position: center;
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Main Content */
 #main {
-  overflow: auto;
+  overflow:auto;
   --padding: 1rem;
   box-sizing: border-box;
   width: 100%;
-  max-height: calc(100% - var(--padding) * 2);
-  margin: 1rem auto;
   padding: var(--padding);
   z-index: 1;
 }

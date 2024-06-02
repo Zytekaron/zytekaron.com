@@ -3,34 +3,50 @@
 <%- include('partials/head') %>
 
 <body>
-  <div id="vanta-container">
+  <div id="vanta-container"></div>
     <%- include('partials/navbar') %>
     <div id="main">
-      <div class="container"><%- include(sub_view) %></div>
+      <div class="container"><%- include(subView) %>
+      </div>
       <%- include("partials/footer") %>
     </div>
-
+    
     <%# Dynamic javascript imports %>
     <% imports?.js?.forEach(js => { %>
     <script src="<%= js %>"></script>
     <% }); %>
 
     <script>
-      VANTA.BIRDS({
+      VANTA.NET({
         el: "#vanta-container",
         mouseControls: true,
         touchControls: true,
         gyroControls: false,
-        minHeight: 200.0,
-        minWidth: 200.0,
-        scale: 1.0,
-        scaleMobile: 1.0,
-        backgroundColor: 0x101010,
-        color1: 0x3841e1,
-        color2: 0x4aff,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0x22DD88,
+        backgroundColor: 0x101010
       });
     </script>
-  </div>
 </body>
 
 </html>
+
+<!--
+VANTA.BIRDS({
+  el: "#vanta-container",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.0,
+  minWidth: 200.0,
+  scale: 1.0,
+  scaleMobile: 1.0,
+  backgroundColor: 0x101010,
+  color1: 0x3841e1,
+  color2: 0x4aff,
+  quantity: 3,
+});
+-->
