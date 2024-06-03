@@ -1,5 +1,16 @@
 [
   {
+    "title": "zytekaron.com",
+    "description": "This website! It's open-source, feel free to contribute :p",
+    "buttons": [
+      {
+        "icon": "github",
+        "url": "https://github.com/Zytekaron/zytekaron.com"
+      }
+    ],
+    "pinned": true
+  },
+  {
     "hide": true,
     "title": "Foo Project 1",
     "description": "Here goes your description",
