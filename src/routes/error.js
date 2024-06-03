@@ -4,7 +4,7 @@ import { redirectError } from "./_error.js";
 
 const router = Router();
 router.get("/", (req, res) => {
-    const { code, ref: referer } = req.query;
+    const { code, ref } = req.query;
 
     if (!code || isNaN(code) || code < 400 || code > 511) {
         return redirectError(res, 400, ref);
