@@ -11,7 +11,7 @@
     <div class="center mt-2" style="display: block">
       <% buttons.forEach(function(button) { %>
       <span>
-        <a href="<%- button.url %>" class="card-link btn btn-success btn-sm">
+        <a href="<%- button.url %>" target="_blank" class="card-link btn btn-success btn-sm">
           <%- button.text %>
           <% if (button.icon.startsWith('https://')) { %>
           <img src="<%- button.icon %>" alt="<%- button.text %>" style="width: 20px; height: 20px" />
