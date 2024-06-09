@@ -25,7 +25,7 @@ html, body {
 /* Global Styles */
 body,
 * {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 html,

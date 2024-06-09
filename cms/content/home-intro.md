@@ -1,3 +1,3 @@
-# Michael Thornes
+# CyPlayz
 
-Hello! I'm a 20-year-old software developer from Seattle, WA.
+Hello! My name is Cy, I'm a 18-year-old IT Major.

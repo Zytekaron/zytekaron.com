@@ -1,5 +1,3 @@
-Hi! I'm Michael. I'm 20, I'm a tech nerd, and I've been a writing software for myself for around 6 years. I spend most of my free time writing in Go, Node.js, and other languages I'm learning on the side, including C and C++. I'm also interested in applied security and cryptography, and methods to maintain privacy and anonymity online.
+Hey there, my name is Cylis, or just Cy. I'm a tech nerd, a IT student, and software developer. I've been contributing on small projects and playing with hardware for almost 9 years now. I spend most of my free time playing video games or trying to learn more languages like C, Go, C++, and Node.js. I'm currently also looking into taking a B.S. in Computer Engineering.
 
-I'm a former Taekwondo sport competitor, and I've competed in many tournaments ranging from local to national. I've trained at two different dojangs over the course of 14 years, and I'm proud to say I've reached the rank of 4th Dan (4th Degree Black Belt), recognized by Kukkiwon. I've been able to make many lasting friends along the way, both during training and competition, and I've enjoyed every minute of it.
-
-Feel free to get in contact with me if you'd like to discuss anything.
+Please feel free to contact me on Discord if you wanna chat!
