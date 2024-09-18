@@ -17,11 +17,6 @@
         {
           "text": "Referrals",
           "href": "/referrals"
-        },
-        {
-          "text": "Docs",
-          "href": "/docs",
-          "external": true
         }
       ]
     },
