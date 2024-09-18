@@ -19,8 +19,8 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "dotenv": "^16.4.5",
-    "ejs": "^3.1.9",
-    "express": "^4.19.2",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
     "gray-matter": "^4.0.3",
     "log4js": "^6.9.1",
     "markdown-it": "^14.1.0",
@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.5"
   }
 }
