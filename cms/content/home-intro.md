@@ -1,3 +1,3 @@
-# Michael Thornes
+# Michael Thornes<span class="accent">.</span>
 
-Hello! I'm a 20-year-old software developer from Seattle, WA.
+I write software, follow my curiosity, and learn by building. Interested in useful tools, applied security, and the inner workings of things.

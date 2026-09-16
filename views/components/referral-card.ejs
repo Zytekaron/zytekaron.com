@@ -1,15 +1,5 @@
-<div class="col-md-4 mb-4">
-  <div class="card h-100 bg-transparent text-white blur-background-3 border">
-    <div class="card-body">
-      <h5 class="card-title"><%= name %></h5>
-
-      <% if (body) { %>
-      <p class="card-text"><%= body %></p>
-      <% } %>
-      <a href="<%= href %>" class="btn btn-success">
-        Referral
-        <i class="bi bi-box-arrow-up-right"></i>
-      </a>
-    </div>
-  </div>
-</div>
+<article class="referral-card">
+  <span class="eyebrow referral-number"><%= String(index + 1).padStart(2, '0') %> /</span>
+  <div><h2><%= name %></h2><% if (body) { %><p><%= body %></p><% } %></div>
+  <a class="referral-link" href="<%= href %>" target="_blank" rel="noopener noreferrer" aria-label="Visit <%= name %> with my referral link (opens in a new tab)"><span class="round-arrow" aria-hidden="true">↗</span></a>
+</article>

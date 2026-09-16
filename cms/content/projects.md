@@ -1,3 +1,3 @@
-# My Projects
+# Things I've built<span class="accent">.</span>
 
-At the moment, this page remains bare. I'll update it in the near future with any projects I feel are in a good, completed state, or that I'm actively working on and maintaining.
+Software, side projects, and things made out of curiosity. Here's a selection of my work, with the source for a closer look.

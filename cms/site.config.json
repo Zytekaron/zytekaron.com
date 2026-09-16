@@ -21,6 +21,7 @@
         {
           "text": "Docs",
           "href": "/docs",
+          "hide": true,
           "external": true
         }
       ]

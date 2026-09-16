@@ -1,21 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-dark blur-background-3 bg-transparent d-flex ps-2 pe-2 pb-3 pt-3 border-bottom border-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">Zytekaron</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <% global.navbar.items.forEach(item => { %>
-        <li class="nav-item">
-          <a class="nav-link <%= (item.href === __path) ? 'active' : '' %>" href="<%= item.href %>" target="<%- item.external ? '_blank' : '_self' %>"><%= item.text %> <% if (item.external) { %>
-            <i class="ms-1 bi bi-box-arrow-up-right text-secondary"></i>
-            <% } %>
-          </a>
-        </li>
-        <% }) %>
-      </ul>
-    </div>
-  </div>
-</nav>
+<header class="site-header shell">
+  <a class="wordmark" href="/" aria-label="Zytekaron home">zyte<span aria-hidden="true">.</span></a>
+  <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden><span>Menu</span><span class="menu-symbol" aria-hidden="true">+</span></button>
+  <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
+    <% global.navbar.items.filter(item => !item.hide).forEach(item => { %>
+      <a href="<%= item.href %>"<% if (item.href === __path) { %> aria-current="page"<% } %><% if (item.external) { %> target="_blank" rel="noopener noreferrer"<% } %>><%= item.text %><% if (item.external) { %><span class="external-arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span><% } %></a>
+    <% }); %>
+  </nav>
+</header>

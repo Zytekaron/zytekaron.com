@@ -1,16 +1,19 @@
-<footer class="bg-transparent center w-100 position-static"> <!-- Add border-top class when you want a border; blur-background-2 when you want a blurred bg -->
-  <div class="container">
-    <!-- <div class="row">
-      <div class="text-center text-md-left">
-        <p>
-          <i class="bi bi-c-circle me-1"></i>Michael Thornes <%- _date.getFullYear() %>. All Rights Reserved.
-        </p>
-      </div> -->
-      <div id="footer-socials" class="flex-row footer-socials">
-        <% global.socials.forEach(social => { %>
-        <a class="p-2 rounded-circle fs-4" href="<%- social.href %>" target="_blank"><i class="bi bi-<%- social.icon ? social.icon.toLowerCase() : social.name.toLowerCase() %>"></i></a>
-        <% }) %>
-      </div>
+<footer class="site-footer shell">
+  <div class="footer-top">
+    <div>
+      <p class="eyebrow">Keep in touch</p>
+      <% const email = global.socials.find(social => social.name === 'Email'); %>
+      <% if (email) { %><a class="footer-email" href="<%= email.href %>">Say hello<span aria-hidden="true">↗</span></a><% } %>
     </div>
+    <nav class="social-links" aria-label="Social links">
+      <% global.socials.filter(social => social.name !== 'Email').forEach(social => { %>
+        <a href="<%= social.href %>" target="_blank" rel="noopener noreferrer"><%= social.name %><span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+      <% }); %>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>© <%= _date.getFullYear() %> Michael Thornes</span>
+    <a href="https://github.com/Zytekaron/zytekaron.com" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+    <span class="footer-signoff">Made with curiosity<span class="small-dot" aria-hidden="true"></span></span>
   </div>
 </footer>

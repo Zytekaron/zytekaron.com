@@ -1,15 +1,28 @@
-<%# Intro Text %>
-<div class="center p-5 mt-2 glassmorphism glow-animation" style="border-radius: 4px">
-  <%- content %>
-</div>
-<%# Card container %>
-<div class="p-3 mt-5">
-  <div class="row justify-content-center d-flex flex-row">
-    <%# Cards %>
-    <% projects.forEach((project, i) => { %>
-    <div class="col-md-3 mb-5">
-      <%- include("components/project-card.ejs", project) %>
+<section class="hero" aria-labelledby="home-title">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span>Software developer · Seattle, WA</p>
+    <div class="hero-intro" id="home-title"><%- content %></div>
+    <div class="hero-actions">
+      <a class="button button-primary" href="/projects">Explore my projects <span aria-hidden="true">↗</span></a>
+      <a class="text-link" href="/about">More about me <span aria-hidden="true">→</span></a>
     </div>
-    <% }) %>
   </div>
+  <aside class="identity-panel" aria-label="Zytekaron's interests">
+    <div class="identity-top"><span>AKA / ZYTEKARON</span><span aria-hidden="true">[ Z ]</span></div>
+    <div class="identity-mark" aria-hidden="true">zyte<span>.</span></div>
+    <div class="identity-bottom"><p>Driven by curiosity.<br />Always tinkering.</p><span class="identity-cross" aria-hidden="true">+</span></div>
+  </aside>
+</section>
+<div class="interest-strip" aria-label="Languages and interests">
+  <span class="eyebrow">In my orbit</span>
+  <ul><li>Go</li><li>Node.js</li><li>C / C++</li><li>Security</li><li>Cryptography</li></ul>
 </div>
+<section class="work-section" aria-labelledby="selected-work">
+  <div class="section-heading">
+    <div><p class="eyebrow">01 / Things I've built</p><h2 id="selected-work">Selected work<span class="accent">.</span></h2></div>
+    <a class="text-link" href="/projects">All projects <span aria-hidden="true">↗</span></a>
+  </div>
+  <div class="project-list">
+    <% projects.forEach((project, index) => { %><%- include('components/project-card', { ...project, index }) %><% }); %>
+  </div>
+</section>

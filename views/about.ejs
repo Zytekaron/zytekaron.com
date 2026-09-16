@@ -1,22 +1,21 @@
-<div class="container pb-4 pt-4 mb-4 glassmorphism">
-  <div class="row ms-1">
-    <!-- Profile -->
-    <div class="col-md-6 text-center order-md-2">
-      <img src="<%- global.pages.about.image %>" class="img-fluid rounded-circle" alt="My Picture" height="400px" width="400px" />
-      <h3 class="mt-2">Michael Thornes</h3>
+<section class="page-heading">
+  <p class="eyebrow">01 / A little about me</p>
+  <h1>Curiosity, in code<br />&amp; beyond<span class="accent">.</span></h1>
+</section>
+<section class="about-layout" aria-label="About Michael">
+  <div class="about-content prose"><%- content %></div>
+  <aside class="profile-panel">
+    <div class="profile-identity">
+      <img src="<%= global.pages.about.image %>" alt="Zytekaron's personal avatar" width="112" height="112" />
+      <h2>Michael Thornes</h2><p class="profile-alias">@Zytekaron</p>
     </div>
-
-    <!-- Border for mobile devices -->
-    <div class="pt-3 pb-3 col-12 d-block d-md-none">
-      <div class="border-top border-2"></div>
-    </div>
-
-    <!-- About section -->
-    <div class="col-md-6 order-md-1">
-      <h2 class="text-center d-block d-md-none">About Me</h2>
-      <h2 class="d-none d-md-block">About Me</h2>
-
-      <div><%- content %></div>
-    </div>
-  </div>
-</div>
+    <dl class="profile-details">
+      <div><dt>Based in</dt><dd>Seattle, WA</dd></div>
+      <div><dt>Writing</dt><dd>Go · Node.js</dd></div>
+      <div><dt>Exploring</dt><dd>C · C++</dd></div>
+      <div><dt>Beyond code</dt><dd>Taekwondo · 4th Dan</dd></div>
+    </dl>
+    <% const email = global.socials.find(social => social.name === 'Email'); %>
+    <% if (email) { %><a class="button button-primary" href="<%= email.href %>">Get in touch <span aria-hidden="true">↗</span></a><% } %>
+  </aside>
+</section>

@@ -1,35 +1,11 @@
 <!DOCTYPE html>
-<html>
-<%- include('partials/head') %>
-
-<body>
-  <div id="vanta-container"></div>
+<html lang="en">
+  <%- include('partials/head') %>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <%- include('partials/navbar') %>
-    <div id="main">
-      <div class="container"><%- include(subView) %>
-      </div>
-      <%- include("partials/footer") %>
-    </div>
-    
-    <%# Dynamic javascript imports %>
-    <% imports?.js?.forEach(js => { %>
-    <script src="<%= js %>"></script>
-    <% }); %>
-
-    <script>
-      VANTA.NET({
-        el: "#vanta-container",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x22DD88,
-        backgroundColor: 0x101010
-      });
-    </script>
-</body>
-
+    <main id="main" class="site-main shell" tabindex="-1"><%- include(subView) %></main>
+    <%- include('partials/footer') %>
+    <% imports?.js?.forEach(js => { %><script src="<%= js %>" defer></script><% }); %>
+  </body>
 </html>

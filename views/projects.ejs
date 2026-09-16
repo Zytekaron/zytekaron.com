@@ -1,14 +1,12 @@
-<div class="container">
-  <%# Project Text Box %>
-  <div class="container glassmorphism mb-4 p-4 centered-heading">
-    <%- content %>
+<section class="page-heading">
+  <p class="eyebrow">02 / Code &amp; experiments</p>
+  <div class="page-intro"><%- content %></div>
+</section>
+<section class="all-projects" aria-label="Projects">
+  <div class="list-caption"><span class="eyebrow">Project index</span><span class="eyebrow"><%= String(projects.length).padStart(2, '0') %> <%= projects.length === 1 ? 'project' : 'projects' %></span></div>
+  <div class="project-list">
+    <% projects.forEach((project, index) => { %><%- include('components/project-card', { ...project, index }) %><% }); %>
+    <% if (!projects.length) { %><p class="empty-state">More projects are on the way. In the meantime, you can find my code on <a href="https://github.com/Zytekaron">GitHub ↗</a>.</p><% } %>
   </div>
-  <%# Project Cards %>
-  <div class="row mb-2">
-    <% projects.forEach(function(project){ %>
-    <div class="col-lg-4 col-md-6 mb-4">
-      <%- include('components/project-card', project) %>
-    </div>
-    <% }) %>
-  </div>
-</div>
+  <a class="text-link projects-github" href="https://github.com/Zytekaron" target="_blank" rel="noopener noreferrer">Find more on GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+</section>

@@ -75,7 +75,7 @@ const server = app.listen(process.env.PORT, process.env.HOSTNAME, () => {
     logger.info(
         "Listening on http://%s:%d",
         process.env.HOSTNAME,
-        process.env.PORT
+        server.address().port
     );
 });
 

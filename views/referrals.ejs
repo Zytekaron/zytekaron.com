@@ -1,12 +1,9 @@
-<div class="container mt-5 text-center mb-4 p-2">
-  <div class="container">
-    <div class="container glassmorphism mb-4 p-4 centered-heading">
-      <h2>Referral Links</h2>
-    </div>
-    <div class="row">
-      <% referrals.forEach(properties => { %>
-      <%- include("components/referral-card", properties) %>
-      <% }) %>
-    </div>
-  </div>
-</div>
+<section class="page-heading">
+  <p class="eyebrow">03 / Around the web</p>
+  <h1>A few useful links<span class="accent">.</span></h1>
+  <p class="page-description">Cloud storage, hosting, and privacy tools. If you're trying one out, these referral links may get you a little extra.</p>
+  <p class="referral-disclosure">I may receive a reward when you use these links. Check each provider for current offer terms.</p>
+</section>
+<section class="referral-list" aria-label="Referral links">
+  <% referrals.forEach((properties, index) => { %><%- include('components/referral-card', { ...properties, index }) %><% }); %>
+</section>
