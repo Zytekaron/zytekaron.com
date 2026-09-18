@@ -1,11 +1,10 @@
 <section class="error-page" aria-labelledby="error-heading">
-  <p class="eyebrow">A small detour</p>
-  <p class="error-code" aria-hidden="true"><%= code %><span class="accent">.</span></p>
+  <p class="error-code">Error <%= code %></p>
   <h1 id="error-heading"><%= heading %></h1>
   <p class="error-message"><%= message %></p>
   <div class="error-actions">
-    <a class="button button-primary" href="/">Back to home <span aria-hidden="true">↗</span></a>
-    <% if (referer) { %><a class="button button-secondary" href="<%= referer %>">Go back <span aria-hidden="true">←</span></a><% } %>
-    <a class="text-link" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/<%= code %>" target="_blank" rel="noopener noreferrer">About this error <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+    <a class="button button-primary" href="/">Back to home</a>
+    <% if (referer) { %><a class="button button-secondary" href="<%= referer %>">Go back </a><% } %>
+    <a class="text-link" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/<%= code %>" target="_blank" rel="noopener noreferrer">About this error<span class="sr-only"> (opens in a new tab)</span></a>
   </div>
 </section>

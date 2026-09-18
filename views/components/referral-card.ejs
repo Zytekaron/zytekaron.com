@@ -1,5 +1,5 @@
 <article class="referral-card">
-  <span class="eyebrow referral-number"><%= String(index + 1).padStart(2, '0') %> /</span>
-  <div><h2><%= name %></h2><% if (body) { %><p><%= body %></p><% } %></div>
-  <a class="referral-link" href="<%= href %>" target="_blank" rel="noopener noreferrer" aria-label="Visit <%= name %> with my referral link (opens in a new tab)"><span class="round-arrow" aria-hidden="true">↗</span></a>
+  <h2><%= name %></h2>
+  <% if (body) { %><p><%= body %></p><% } %>
+  <a class="referral-link" href="<%= href %>" target="_blank" rel="noopener noreferrer" aria-label="Visit <%= name %> with my referral link (opens in a new tab)">Visit <%= name %></a>
 </article>

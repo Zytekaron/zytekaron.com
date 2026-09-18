@@ -1,28 +1,34 @@
-<section class="hero" aria-labelledby="home-title">
-  <div class="hero-copy">
-    <p class="eyebrow"><span class="small-dot" aria-hidden="true"></span>Software developer · Seattle, WA</p>
-    <div class="hero-intro" id="home-title"><%- content %></div>
-    <div class="hero-actions">
-      <a class="button button-primary" href="/projects">Explore my projects <span aria-hidden="true">↗</span></a>
-      <a class="text-link" href="/about">More about me <span aria-hidden="true">→</span></a>
+<section class="home-intro" aria-labelledby="home-title">
+  <div class="intro-copy" id="home-title">
+    <p class="intro-label">Software developer · Seattle, WA</p>
+    <%- content %>
+    <div class="intro-links">
+      <a class="button button-primary" href="/projects">View projects</a>
+      <a class="button button-secondary" href="/about">About me</a>
     </div>
   </div>
-  <aside class="identity-panel" aria-label="Zytekaron's interests">
-    <div class="identity-top"><span>AKA / ZYTEKARON</span><span aria-hidden="true">[ Z ]</span></div>
-    <div class="identity-mark" aria-hidden="true">zyte<span>.</span></div>
-    <div class="identity-bottom"><p>Driven by curiosity.<br />Always tinkering.</p><span class="identity-cross" aria-hidden="true">+</span></div>
+  <aside class="home-profile" aria-label="Profile">
+    <img src="<%= global.pages.about.image %>" alt="Zytekaron's personal avatar" width="72" height="72" />
+    <p class="profile-name">Zytekaron</p>
+    <p class="profile-location">Seattle, Washington</p>
+    <div class="profile-contact">
+      <% global.socials.filter(social => ['Email', 'GitHub'].includes(social.name)).forEach(social => { %>
+        <a href="<%= social.href %>"<% if (social.name !== 'Email') { %> target="_blank" rel="noopener noreferrer"<% } %>><%= social.name %><% if (social.name !== 'Email') { %><span class="sr-only"> (opens in a new tab)</span><% } %></a>
+      <% }); %>
+    </div>
   </aside>
 </section>
-<div class="interest-strip" aria-label="Languages and interests">
-  <span class="eyebrow">In my orbit</span>
-  <ul><li>Go</li><li>Node.js</li><li>C / C++</li><li>Security</li><li>Cryptography</li></ul>
-</div>
-<section class="work-section" aria-labelledby="selected-work">
-  <div class="section-heading">
-    <div><p class="eyebrow">01 / Things I've built</p><h2 id="selected-work">Selected work<span class="accent">.</span></h2></div>
-    <a class="text-link" href="/projects">All projects <span aria-hidden="true">↗</span></a>
-  </div>
+<section class="home-section" aria-labelledby="selected-work">
+  <div class="section-heading"><h2 id="selected-work">Selected projects</h2><a class="text-link" href="/projects">All projects</a></div>
   <div class="project-list">
     <% projects.forEach((project, index) => { %><%- include('components/project-card', { ...project, index }) %><% }); %>
   </div>
+</section>
+<section class="home-section interests-section" aria-labelledby="interests-heading">
+  <div class="section-heading"><h2 id="interests-heading">What I'm interested in</h2></div>
+  <dl class="interest-list">
+    <div><dt>Working with</dt><dd>Go and Node.js</dd></div>
+    <div><dt>Learning</dt><dd>C and C++</dd></div>
+    <div><dt>Exploring</dt><dd>Security, cryptography, and online privacy</dd></div>
+  </dl>
 </section>

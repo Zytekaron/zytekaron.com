@@ -1,9 +1,9 @@
 <header class="site-header shell">
-  <a class="wordmark" href="/" aria-label="Zytekaron home">zyte<span aria-hidden="true">.</span></a>
-  <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden><span>Menu</span><span class="menu-symbol" aria-hidden="true">+</span></button>
+  <a class="wordmark" href="/" aria-label="Zytekaron home">Zytekaron</a>
+  <button class="menu-toggle" type="button" aria-controls="site-navigation" aria-expanded="false" hidden>Menu</button>
   <nav class="site-navigation" id="site-navigation" aria-label="Main navigation">
     <% global.navbar.items.filter(item => !item.hide).forEach(item => { %>
-      <a href="<%= item.href %>"<% if (item.href === __path) { %> aria-current="page"<% } %><% if (item.external) { %> target="_blank" rel="noopener noreferrer"<% } %>><%= item.text %><% if (item.external) { %><span class="external-arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span><% } %></a>
+      <a href="<%= item.href %>"<% if (item.href === __path) { %> aria-current="page"<% } %><% if (item.external) { %> target="_blank" rel="noopener noreferrer"<% } %>><%= item.text %><% if (item.external) { %><span class="sr-only"> (opens in a new tab)</span><% } %></a>
     <% }); %>
   </nav>
 </header>

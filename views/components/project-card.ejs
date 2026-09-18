@@ -1,14 +1,12 @@
 <article class="project-card">
-  <div class="project-number"><%= String(index + 1).padStart(2, '0') %><span aria-hidden="true">/</span></div>
   <div class="project-copy">
-    <div class="project-meta"><%= pinned ? 'Featured project' : 'Project' %><% if (buttons.some(button => ['github', 'gitlab'].includes(button.icon))) { %><span aria-hidden="true">·</span>Source available<% } %></div>
-    <h3><%= title %></h3>
+    <% if (typeof headingLevel !== 'undefined' && headingLevel === 2) { %><h2><%= title %></h2><% } else { %><h3><%= title %></h3><% } %>
     <p><%= description %></p>
   </div>
   <div class="project-actions">
     <% buttons.forEach(button => { %>
       <% const label = button.text || (button.icon === 'github' ? 'View on GitHub' : button.icon === 'gitlab' ? 'View on GitLab' : 'View project'); %>
-      <a href="<%= button.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= label %>: <%= title %> (opens in a new tab)"><span><%= label %></span><span class="round-arrow" aria-hidden="true">↗</span></a>
+      <a class="text-link" href="<%= button.url %>" target="_blank" rel="noopener noreferrer" aria-label="<%= label %>: <%= title %> (opens in a new tab)"><%= label %></a>
     <% }); %>
   </div>
 </article>

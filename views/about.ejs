@@ -1,21 +1,21 @@
 <section class="page-heading">
-  <p class="eyebrow">01 / A little about me</p>
-  <h1>Curiosity, in code<br />&amp; beyond<span class="accent">.</span></h1>
+  <h1>About me</h1>
+  <p class="page-description">A bit about my work, interests, and life away from the keyboard.</p>
 </section>
 <section class="about-layout" aria-label="About Michael">
   <div class="about-content prose"><%- content %></div>
   <aside class="profile-panel">
     <div class="profile-identity">
-      <img src="<%= global.pages.about.image %>" alt="Zytekaron's personal avatar" width="112" height="112" />
+      <img src="<%= global.pages.about.image %>" alt="Zytekaron's personal avatar" width="64" height="64" />
       <h2>Michael Thornes</h2><p class="profile-alias">@Zytekaron</p>
     </div>
     <dl class="profile-details">
       <div><dt>Based in</dt><dd>Seattle, WA</dd></div>
-      <div><dt>Writing</dt><dd>Go · Node.js</dd></div>
-      <div><dt>Exploring</dt><dd>C · C++</dd></div>
-      <div><dt>Beyond code</dt><dd>Taekwondo · 4th Dan</dd></div>
+      <div><dt>Working with</dt><dd>Go and Node.js</dd></div>
+      <div><dt>Learning</dt><dd>C and C++</dd></div>
+      <div><dt>Outside of software</dt><dd>Taekwondo · 4th Dan</dd></div>
     </dl>
     <% const email = global.socials.find(social => social.name === 'Email'); %>
-    <% if (email) { %><a class="button button-primary" href="<%= email.href %>">Get in touch <span aria-hidden="true">↗</span></a><% } %>
+    <% if (email) { %><a class="button button-secondary" href="<%= email.href %>">Get in touch</a><% } %>
   </aside>
 </section>

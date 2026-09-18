@@ -1,19 +1,18 @@
 <footer class="site-footer shell">
   <div class="footer-top">
-    <div>
-      <p class="eyebrow">Keep in touch</p>
+    <div class="footer-contact">
+      <h2>Get in touch</h2>
       <% const email = global.socials.find(social => social.name === 'Email'); %>
-      <% if (email) { %><a class="footer-email" href="<%= email.href %>">Say hello<span aria-hidden="true">↗</span></a><% } %>
+      <% if (email) { %><a href="<%= email.href %>"><%= email.href.replace('mailto:', '') %></a><% } %>
     </div>
     <nav class="social-links" aria-label="Social links">
       <% global.socials.filter(social => social.name !== 'Email').forEach(social => { %>
-        <a href="<%= social.href %>" target="_blank" rel="noopener noreferrer"><%= social.name %><span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+        <a href="<%= social.href %>" target="_blank" rel="noopener noreferrer"><%= social.name %><span class="sr-only"> (opens in a new tab)</span></a>
       <% }); %>
     </nav>
   </div>
   <div class="footer-bottom">
     <span>© <%= _date.getFullYear() %> Michael Thornes</span>
-    <a href="https://github.com/Zytekaron/zytekaron.com" target="_blank" rel="noopener noreferrer">View source <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
-    <span class="footer-signoff">Made with curiosity<span class="small-dot" aria-hidden="true"></span></span>
+    <a href="https://github.com/Zytekaron/zytekaron.com" target="_blank" rel="noopener noreferrer">Website source<span class="sr-only"> (opens in a new tab)</span></a>
   </div>
 </footer>

@@ -1,5 +1,1 @@
-@media (prefers-reduced-motion: no-preference) {
-  .hero-copy, .identity-panel { animation: enter 650ms both; }
-  .identity-panel { animation-delay: 90ms; }
-  @keyframes enter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
-}
+/* This design intentionally uses no entrance or decorative animations. */

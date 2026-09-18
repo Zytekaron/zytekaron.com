@@ -1,3 +1,3 @@
-# Michael Thornes<span class="accent">.</span>
+# Michael Thornes
 
-I write software, follow my curiosity, and learn by building. Interested in useful tools, applied security, and the inner workings of things.
+I build software and enjoy figuring out how things work. Most of my time goes into Go and Node.js, with an interest in security, cryptography, and online privacy.

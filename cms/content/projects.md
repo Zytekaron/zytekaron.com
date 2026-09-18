@@ -1,3 +1,3 @@
-# Things I've built<span class="accent">.</span>
+# Projects
 
-Software, side projects, and things made out of curiosity. Here's a selection of my work, with the source for a closer look.
+A selection of my software and side projects. Source links are included if you'd like to take a closer look or contribute.

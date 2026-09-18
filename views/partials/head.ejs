@@ -4,12 +4,12 @@
   <% const pageNames = { '/about': 'About', '/projects': 'Projects', '/referrals': 'Referrals', '/error': 'Page unavailable' }; %>
   <title><%= pageNames[__path] ? pageNames[__path] + ' — ' : '' %>Michael Thornes · Zytekaron</title>
   <meta name="description" content="Michael Thornes, a software developer from Seattle. Projects, experiments, and an interest in security, cryptography, and online privacy." />
-  <meta name="theme-color" content="#111312" />
-  <meta name="color-scheme" content="dark" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="color-scheme" content="light" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750;800&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750;800&amp;display=swap" rel="stylesheet" />
   <link href="/styles/global.css" rel="stylesheet" />
   <% imports?.css?.forEach(css => { %><link rel="stylesheet" href="<%= css %>" /><% }); %>
   <script src="/js/global.js" defer></script>
