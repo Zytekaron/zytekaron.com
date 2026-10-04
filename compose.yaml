@@ -1,0 +1,20 @@
+name: zytekaron
+
+services:
+  website:
+    build: .
+    image: zytekaron-website:latest
+    restart: unless-stopped
+    init: true
+    ports:
+      - "127.0.0.1:${WEBSITE_PORT:-3000}:3000"
+    read_only: true
+    cap_drop:
+      - ALL
+    security_opt:
+      - no-new-privileges:true
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"

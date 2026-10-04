@@ -7,6 +7,10 @@ import { calculateAge } from '../public/js/calculate-age.js';
 let server;
 let origin;
 before(async () => {
+  if (process.env.SITE_TEST_ORIGIN) {
+    origin = new URL(process.env.SITE_TEST_ORIGIN).origin;
+    return;
+  }
   server = spawn(process.execPath, ['src/server.js'], {
     env: { ...process.env, PORT: '0', HOSTNAME: '127.0.0.1' },
     stdio: ['ignore', 'pipe', 'pipe'],

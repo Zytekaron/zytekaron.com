@@ -1,0 +1,15 @@
+.git
+.github
+.openai
+.agents
+.codex
+.env
+.env.*
+node_modules
+logs
+dist
+tests
+scripts
+README.md
+pnpm-lock*.yaml
+.DS_Store
