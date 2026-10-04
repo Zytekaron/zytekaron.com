@@ -1,5 +1,9 @@
 {
   "global": {
+    "profile": {
+      "birthDate": "2003-07-10",
+      "timeZone": "America/Los_Angeles"
+    },
     "navbar": {
       "items": [
         {
@@ -29,7 +33,7 @@
       "socials": [
         {
           "name": "Email",
-          "href": "mailto:michael@zyte.me",
+          "href": "mailto:michael@zyte.dev",
           "icon": "envelope-at"
         },
         {

@@ -17,6 +17,10 @@ For example: `HOSTNAME=127.0.0.1 PORT=3000 npm run start:dev`.
 
 The existing Docs navigation item is hidden because `/docs` has no implementation and returned an error on the live site. Restore it when documentation is available.
 
+The profile's birth date and time zone live in `cms/site.config.json`. Age is calculated at request/build time and refreshed in the browser, so the static preview stays current on future birthdays. The About page displays the age; it does not display the full birth date.
+
+Referral entries use `name`, `body`, and `href`; set `hide: true` to hide an entry, or change the array order to reorder the page. After updating the file, restart the Express server, or rebuild and republish the static site.
+
 ## Validation and deployment
 
 `npm test` checks the public routes, local links and assets, and error handling.

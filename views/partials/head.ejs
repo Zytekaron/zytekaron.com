@@ -13,6 +13,7 @@
   <link href="/styles/global.css" rel="stylesheet" />
   <% imports?.css?.forEach(css => { %><link rel="stylesheet" href="<%= css %>" /><% }); %>
   <script src="/js/global.js" defer></script>
+  <% if (__path === '/about') { %><script type="module" src="/js/age.js"></script><% } %>
   <script src="/vendor/three.r134.min.js" defer></script>
   <script src="/vendor/vanta.net.min.js" defer></script>
   <script src="/js/background.js" defer></script>

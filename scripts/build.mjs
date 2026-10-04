@@ -5,11 +5,14 @@ import { site, projects, referrals } from '../src/config.js';
 import readJSON from '../src/utils/readJSON.js';
 import renderMarkdown from '../src/utils/renderMarkdown.js';
 import projectDir from '../src/utils/_project_dir.js';
+import { calculateAge } from '../public/js/calculate-age.js';
 
 // The Express app remains the main runtime. This export uses the same EJS
 // templates and CMS files to produce a portable static review/deployment.
 const output = path.join(projectDir, 'dist');
 const imports = readJSON('cms/_imports.json');
+const now = new Date();
+const age = calculateAge(site.global.profile.birthDate, now, site.global.profile.timeZone);
 const visibleProjects = projects.filter(project => !project.hide).map(project => ({
   ...project, pinned: Boolean(project.pinned),
 }));
@@ -29,7 +32,7 @@ await cp(path.join(projectDir, 'public'), output, { recursive: true });
 for (const page of pages) {
   const html = await ejs.renderFile(path.join(projectDir, 'views/layout.ejs'), {
     global: { ...site.global, socials: site.global.socials.filter(social => !social.hide) },
-    imports: imports[page.route], __path: page.route, _date: new Date(), ...page,
+    imports: imports[page.route], __path: page.route, _date: now, _age: age, ...page,
   });
   const destination = path.join(output, page.route, 'index.html');
   await mkdir(path.dirname(destination), { recursive: true });
