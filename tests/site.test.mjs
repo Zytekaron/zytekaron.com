@@ -6,6 +6,12 @@ import { calculateAge } from '../public/js/calculate-age.js';
 
 let server;
 let origin;
+// Cloudflare rewrites mailto links on zytekaron.com; validate their decoded destination.
+const normalizeEmailLinks = html => html.replace(/\/cdn-cgi\/l\/email-protection#([a-f0-9]+)/gi, (_, encoded) => {
+  const bytes = Buffer.from(encoded, 'hex');
+  return `mailto:${Buffer.from(bytes.subarray(1).map(byte => byte ^ bytes[0])).toString()}`;
+});
+
 before(async () => {
   if (process.env.SITE_TEST_ORIGIN) {
     origin = new URL(process.env.SITE_TEST_ORIGIN).origin;
@@ -38,7 +44,7 @@ test('all public pages render complete, accessible documents', async () => {
   for (const route of ['/', '/about', '/projects', '/referrals', '/about/']) {
     const response = await fetch(origin + route);
     assert.equal(response.status, 200, route);
-    const html = await response.text();
+    const html = normalizeEmailLinks(await response.text());
     assert.match(html, /<html lang="en">/);
     assert.equal((html.match(/<h1[ >]/g) || []).length, 1, `${route}: one main heading`);
     assert.match(html, /Skip to content/);
@@ -72,7 +78,7 @@ test('about page renders the current age and includes automatic browser updates'
 test('every local navigation and asset link resolves', async () => {
   const links = new Set();
   for (const route of ['/', '/about', '/projects', '/referrals']) {
-    const html = await (await fetch(origin + route)).text();
+    const html = normalizeEmailLinks(await (await fetch(origin + route)).text());
     for (const match of html.matchAll(/(?:href|src)="(\/[^"\s]*)"/g)) links.add(match[1]);
   }
   for (const link of links) {
