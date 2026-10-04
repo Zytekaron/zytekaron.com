@@ -21,7 +21,7 @@ The profile's birth date and time zone live in `cms/site.config.json`. Age is ca
 
 For referral changes, just ask for a link to be added, changed, hidden, or reordered. No account, dashboard, or extra service is needed: `cms/referrals.config.json` is the source of truth, and changes are committed and deployed with the website.
 
-Referral entries use `name`, `body`, and `href`; set `hide: true` to hide an entry, or change the array order to reorder the page. The server reads this file at startup. Rebuild and recreate the container after an edit.
+Referral entries use `name`, `body`, and `href`; set `hide: true` to hide an entry, or change the array order to reorder the page. Set `featured: true` for a full-width highlighted card with a prominent button, and place it first in the array to feature it at the top. The server reads this file at startup. Rebuild and recreate the container after an edit.
 
 ## Validation and deployment
 

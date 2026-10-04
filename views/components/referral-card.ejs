@@ -1,5 +1,8 @@
-<article class="referral-card">
-  <h2><%= name %></h2>
-  <% if (body) { %><p><%= body %></p><% } %>
-  <a class="referral-link" href="<%= href %>" target="_blank" rel="noopener noreferrer" aria-label="Visit <%= name %> with my referral link (opens in a new tab)">Visit <%= name %></a>
+<article class="referral-card<%= featured ? ' referral-card-featured' : '' %>">
+  <div class="referral-copy">
+    <% if (featured) { %><span class="referral-label">Featured referral</span><% } %>
+    <h2><%= name %></h2>
+    <% if (body) { %><p><%= body %></p><% } %>
+  </div>
+  <a class="<%= featured ? 'button button-primary' : 'referral-link' %>" href="<%= href %>" target="_blank" rel="noopener noreferrer" aria-label="Visit <%= name %> with my referral link (opens in a new tab)">Visit <%= name %></a>
 </article>

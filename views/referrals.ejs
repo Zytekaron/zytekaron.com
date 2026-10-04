@@ -1,8 +1,8 @@
 <section class="page-heading">
   <h1>Referral links</h1>
-  <p class="page-description">Cloud storage, hosting, and privacy tools. These links may include a bonus when you sign up.</p>
+  <p class="page-description">Finance, cloud storage, hosting, and privacy tools. These links may include a bonus when you sign up.</p>
   <p class="referral-disclosure">I may receive a reward when you use these links. Check each provider for current offer terms.</p>
 </section>
 <section class="referral-list" aria-label="Referral links">
-  <% referrals.forEach((properties, index) => { %><%- include('components/referral-card', { ...properties, index }) %><% }); %>
+  <% referrals.forEach((properties, index) => { %><%- include('components/referral-card', { featured: false, ...properties, index }) %><% }); %>
 </section>

@@ -120,6 +120,10 @@ h3 { font-size: 1.125rem; }
 .error-actions { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1.5rem; margin-top: 1.75rem; }
 .project-card, .profile-panel, .referral-card { background: linear-gradient(115deg, #1a2c25eb, #111c19e6); border-color: #70dfb033; box-shadow: 0 12px 36px #00000026, inset 0 1px #b6ffdf08; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
 .project-card:hover, .referral-card:hover { border-color: #70dfb073; }
+.referral-card-featured { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 1.5rem 2rem; padding: 2rem; border-color: #70dfb099; background: linear-gradient(115deg, #224b39f0, #13251fea); }
+.referral-card-featured:hover { border-color: var(--accent); }
+.referral-card-featured h2 { font-size: 1.65rem; }
+.referral-label { display: inline-block; color: var(--accent); font-size: .8125rem; font-weight: 600; margin-bottom: .65rem; }
 @media (max-width: 900px) {
   .home-intro { gap: 3rem; grid-template-columns: minmax(0, 1fr) 190px; }
   .home-profile { padding-left: 1.5rem; }
@@ -152,6 +156,8 @@ h3 { font-size: 1.125rem; }
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
   .profile-panel { max-width: 30rem; }
   .referral-list { grid-template-columns: 1fr; }
+  .referral-card-featured { grid-template-columns: 1fr; padding: 1.5rem; }
+  .referral-card-featured .button { justify-self: start; }
   .error-page { padding-block: 2.5rem; }
 }
 @media (max-width: 360px) { .interest-list > div { grid-template-columns: 1fr; gap: .2rem; } }
