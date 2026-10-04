@@ -4,7 +4,7 @@
   <% const pageNames = { '/about': 'About', '/projects': 'Projects', '/referrals': 'Referrals', '/error': 'Page unavailable' }; %>
   <title><%= pageNames[__path] ? pageNames[__path] + ' — ' : '' %>Michael Thornes · Zytekaron</title>
   <meta name="description" content="Michael Thornes, a software developer from Seattle. Projects, experiments, and an interest in security, cryptography, and online privacy." />
-  <meta name="theme-color" content="#121519" />
+  <meta name="theme-color" content="#0c1212" />
   <meta name="color-scheme" content="dark" />
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,4 +13,7 @@
   <link href="/styles/global.css" rel="stylesheet" />
   <% imports?.css?.forEach(css => { %><link rel="stylesheet" href="<%= css %>" /><% }); %>
   <script src="/js/global.js" defer></script>
+  <script src="/vendor/three.r134.min.js" defer></script>
+  <script src="/vendor/vanta.net.min.js" defer></script>
+  <script src="/js/background.js" defer></script>
 </head>
