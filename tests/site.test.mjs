@@ -82,8 +82,9 @@ test('every local navigation and asset link resolves', async () => {
     for (const match of html.matchAll(/(?:href|src)="(\/[^"\s]*)"/g)) links.add(match[1]);
   }
   for (const link of links) {
-    const response = await fetch(origin + link, { method: 'HEAD', redirect: 'manual' });
+    const response = await fetch(origin + link, { redirect: 'manual' });
     assert.equal(response.status, 200, link);
+    await response.body?.cancel();
   }
 });
 
